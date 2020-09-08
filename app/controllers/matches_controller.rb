@@ -1,10 +1,14 @@
 class MatchesController < ApplicationController
     def show
-        Matches.find(params[:id])
+        render json: MatchSerializer.new(match).to_detailed_serialized_json
     end
 
     def create
         @match = Matches.create(match_params)
+    end
+
+    def match
+        Matches.find(params[:id])
     end
 
     def match_params
