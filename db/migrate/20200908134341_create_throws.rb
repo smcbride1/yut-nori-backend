@@ -1,4 +1,4 @@
-class CreateThrow < ActiveRecord::Migration[6.0]
+class CreateThrows < ActiveRecord::Migration[6.0]
   def change
     create_table :throws do |t|
       t.integer :round_id
